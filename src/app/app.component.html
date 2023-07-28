@@ -1,0 +1,24 @@
+<app-header>
+  <app-logo />
+  <app-traffic-lights-statistics [trafficLights]="(trafficLightsService.lights$ | async)!" />
+  <app-total-lights [numberOfLights]="(trafficLightsService.lights$ | async)!.length" />
+</app-header>
+<div class="content-container">
+  <app-sidebar class="sidebar">
+    <app-primary-btn class="btn" [color]="'green'" (click)="addLight()">Add light</app-primary-btn>
+    <app-traffic-light-card
+      class="light-card"
+      *ngFor="let light of trafficLightsService.lights$ | async"
+      [lightColor]="light.color"
+      [lightName]="light.name"
+      [isActive]="light.id === (trafficLightsService.activeLight$ | async)?.id"
+      (onClick)="setActiveLightCard(light.id)"
+      />
+  </app-sidebar>
+  <app-main class="main">
+    <app-no-lights-placeholder *ngIf="(trafficLightsService.lights$ | async)?.length === 0; else lights"/>
+    <ng-template #lights>
+      <app-light-details />
+    </ng-template>
+  </app-main>
+</div>

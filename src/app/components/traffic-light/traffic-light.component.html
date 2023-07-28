@@ -1,0 +1,17 @@
+<div class="traffic-light">
+  <app-traffic-light-lamp
+    class="lamp"
+    [color]="activeColor === red ? red : gray"
+    [size]="'100%'"
+  />
+  <app-traffic-light-lamp
+    class="lamp lamp_middle"
+    [color]="activeColor === orange ? orange : gray"
+    [size]="'100%'"
+  />
+  <app-traffic-light-lamp
+    class="lamp"
+    [color]="activeColor === green ? green : gray"
+    [size]="'100%'"
+  />
+</div>

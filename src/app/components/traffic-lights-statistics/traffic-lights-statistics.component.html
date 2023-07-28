@@ -1,0 +1,15 @@
+<div class="lights-statistics">
+  <app-color-statistics
+    [quantity]="getNumberOfRedLights()"
+    [colorName]="red"
+  />
+  <app-color-statistics
+    class="middle-margin"
+    [quantity]="getNumberOfOrangeLights()"
+    [colorName]="orange"
+  />
+  <app-color-statistics
+    [quantity]="getNumberOfGreenLights()"
+    [colorName]="green"
+  />
+</div>

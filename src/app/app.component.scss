@@ -1,0 +1,22 @@
+.content-container {
+  height: calc(100% - var(--header-height));
+  display: flex;
+  flex-direction: row;
+}
+
+// .sidebar {
+//   flex-shrink: 4;
+// }
+
+// .main {
+//   flex-shrink: 1;
+// }
+
+.light-card {
+  margin-bottom: 18px;
+}
+
+.btn {
+  width: 100%;
+  margin-bottom: 22px;
+}

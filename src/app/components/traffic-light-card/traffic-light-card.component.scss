@@ -1,0 +1,39 @@
+:host {
+  display: block;
+}
+
+.traffic-light-card {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--main-white);
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  transition: scale 110ms ease-in-out;
+
+  &:hover {
+    scale: 1.01;
+  }
+}
+
+.active {
+  background-color: var(--main-light-blue);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 1.1429rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+}

@@ -1,0 +1,19 @@
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background-color: var(--dark-night);
+  border-radius: 4px;
+  width: fit-content
+}
+
+.lamp {
+  height: 26px;
+  width: 26px;
+
+  &_middle {
+    margin: 8px 0;
+  }
+}
+
+

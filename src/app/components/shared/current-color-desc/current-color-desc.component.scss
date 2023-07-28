@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: inherit;
+  line-height: inherit;
+
+  &_accent {
+    font-weight: 400;
+  }
+}

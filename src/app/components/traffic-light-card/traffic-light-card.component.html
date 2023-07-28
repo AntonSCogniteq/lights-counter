@@ -1,0 +1,12 @@
+<div
+  class="traffic-light-card"
+  [class.active]="isActive"
+  (click)="handleClick()"
+>
+  <section class="header">
+    <h6 class="name">{{ lightName }}</h6>
+    <app-traffic-light-lamp [color]="lightColor" [size]="'12px'" />
+  </section>
+
+  <app-current-color-desc [color]="lightColor" />
+</div>

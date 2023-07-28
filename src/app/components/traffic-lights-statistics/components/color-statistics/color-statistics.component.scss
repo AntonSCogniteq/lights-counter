@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+.color-statistics {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 6px 12px;
+  min-width: 100px;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 13px;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1429rem;
+  font-weight: 300;
+
+  &:nth-child(1) {
+    margin-right: 6px;
+  }
+}

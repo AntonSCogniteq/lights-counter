@@ -1,0 +1,23 @@
+<div class="toggler">
+  <app-traffic-light-lamp
+    class="lamp"
+    [class.disabled]="currentColor === red"
+    (click)="emitColor(red)"
+    [color]="currentColor !== red ? red : gray"
+    [size]="'16px'"
+  />
+  <app-traffic-light-lamp
+    class="lamp"
+    [class.disabled]="currentColor === orange"
+    (click)="emitColor(orange)"
+    [color]="currentColor !== orange ? orange : gray"
+    [size]="'16px'"
+  />
+  <app-traffic-light-lamp
+    class="lamp"
+    [class.disabled]="currentColor === green"
+    (click)="emitColor(green)"
+    [color]="currentColor !== green ? green : gray"
+    [size]="'16px'"
+  />
+</div>

@@ -1,0 +1,39 @@
+<section
+  class="details"
+  *ngIf="
+    (trafficLightsService.activeLight$ | async) &&
+      (trafficLightsService.activeLight$ | async)?.color !== null;
+    else lightPlaceholder
+  "
+>
+  <app-traffic-light
+    [activeColor]="(trafficLightsService.activeLight$ | async)!.color"
+  />
+
+  <section class="dashboard">
+    <h2 class="title">
+      {{ (trafficLightsService.activeLight$ | async)?.name }}
+    </h2>
+    <div class="dashboard__main">
+      <div class="dashboard__wrapper">
+        <app-current-color-desc
+          [color]="(trafficLightsService.activeLight$ | async)!.color"
+        />
+        <section class="controllers">
+          <h6 class="controllers__title">change color:</h6>
+          <app-light-toggler
+            [currentColor]="(trafficLightsService.activeLight$ | async)!.color"
+            (onColor)="applyColor($event)"
+          />
+        </section>
+      </div>
+      <app-primary-btn class="btn" color="red" (click)="removeLight()">
+        <span class="btn-name">Remove light</span>
+      </app-primary-btn>
+    </div>
+  </section>
+</section>
+
+<ng-template #lightPlaceholder>
+  <app-light-details-placeholder />
+</ng-template>

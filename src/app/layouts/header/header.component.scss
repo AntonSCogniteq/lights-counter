@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  min-width: 100%;
+  height: var(--header-height);
+  background-color: var( --main-white);
+  border-bottom: 2px solid var(--main-gray);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

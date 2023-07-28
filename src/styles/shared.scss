@@ -1,0 +1,16 @@
+.app-side-padding {
+  padding: 0 var(--app-side-padding);
+  box-sizing: border-box;
+}
+
+.app-text-placeholder {
+  width: 100%;
+  text-align: center;
+}
+
+.app-text-placeholder__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  color: var(--gray);
+  text-transform: uppercase;
+}
